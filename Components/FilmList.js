@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 export default function FilmList(props) {
     const { films, navigation, page, totalPages, loadFilms, isFavoriteList } = props;
-    const favoritesFilm = useSelector(state => state.favoritesFilm);
+    const favoritesFilm = useSelector(state => state.toggleFavorite.favoritesFilm);
 
     const displayFilmDetail = (idFilm) => {
         navigation.navigate("Détail", {idFilm: idFilm})
